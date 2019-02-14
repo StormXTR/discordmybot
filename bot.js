@@ -56,7 +56,7 @@ bot.on("ready", () => {
     });
 });
 
-let prefix = conf.prefix;
+let prefix = procces.env.PREFIX;
 bot.on("message", msg => {
 
     let messageArray = msg.content.split(" ");
