@@ -5,7 +5,7 @@ module.exports.run = async (bot, msg, args) => {
     if(sayi < 1) return msg.reply("Bir sayı girmelisin!");
     if(sayi >= 100) return msg.reply("100\'den fazla sayı giremezsin!");
 
-    msg.channel.bulkDelete(sayi).then(msg => msg.delete(3000));
+    msg.channel.bulkDelete(sayi+1).then(msg => msg.delete(3000));
 
     let embed = new Discord.RichEmbed()
         .setColor("RANDOM")
